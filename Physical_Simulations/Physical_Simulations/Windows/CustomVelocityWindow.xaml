@@ -1,0 +1,32 @@
+﻿<Window x:Class="Physical_Simulations.Windows.CustomVelocityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Physical_Simulations.Windows"
+        mc:Ignorable="d"
+        Title="Custom velocity values" Height="162.4" Width="333.6" WindowStartupLocation="CenterScreen" Background="Black" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="0 5 0 5">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Velocity X₀:" Foreground="White" VerticalAlignment="Center"/>
+                <Slider Name="sliderX" Minimum="-1000" Maximum="1000" TickFrequency="1" IsSnapToTickEnabled="True" Width="220"/>
+                <TextBox Text="{Binding Value, ElementName=sliderX, UpdateSourceTrigger=PropertyChanged}" Width="25" Height="20" IsReadOnly="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Velocity Y₀:" Foreground="White" VerticalAlignment="Center"/>
+                <Slider Name="sliderY" Minimum="-1000" Maximum="1000" TickFrequency="1" IsSnapToTickEnabled="True" Width="220"/>
+                <TextBox Text="{Binding Value, ElementName=sliderY, UpdateSourceTrigger=PropertyChanged}" Width="25" Height="20" IsReadOnly="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Velocity Z₀:" Foreground="White" VerticalAlignment="Center"/>
+                <Slider Name="sliderZ" Minimum="-1000" Maximum="1000" TickFrequency="1" IsSnapToTickEnabled="True" Width="220"/>
+                <TextBox Text="{Binding Value, ElementName=sliderZ, UpdateSourceTrigger=PropertyChanged}" Width="25" Height="20" IsReadOnly="True"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="btnSave" Content="Save" Margin="10" Click="btnSave_Click" Width="70"/>
+                <Button Name="btnCancel" Content="Cancel" Margin="10" Click="btnCancel_Click" Width="70"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

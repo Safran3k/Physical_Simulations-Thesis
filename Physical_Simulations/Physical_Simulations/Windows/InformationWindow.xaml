@@ -1,0 +1,50 @@
+﻿<Window x:Class="Physical_Simulations.Windows.InformationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:local="clr-namespace:Physical_Simulations.Windows"
+        mc:Ignorable="d"
+        Title="Information about this project" Height="500" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="2">
+            <wv2:WebView2 Name="webView"/>
+        </Border>
+
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Name="tbInformationText" Foreground="White" TextWrapping="Wrap" Height="390"/>
+        </StackPanel>
+
+        <Button Name="btnPageLeft" Width="40" Height="40" Margin="59,0,101,10.4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" ToolTip="Page left" Click="btnPageLeft_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse Fill="#FFDDDDDD" Stroke="Black" StrokeThickness="2"/>
+                        <Path Stroke="Black" StrokeThickness="2" Data="M 20,15 L 10,20 20,25 Z" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-10,10,0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Name="btnPageRight" Width="40" Height="40" Margin="104,0,56,10.4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" ToolTip="Page right" Click="btnPageRight_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse Fill="#FFDDDDDD" Stroke="Black" StrokeThickness="2"/>
+                        <Path Stroke="Black" StrokeThickness="2" Data="M 10,15 L 20,20 10,25 Z" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-10,5,0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
