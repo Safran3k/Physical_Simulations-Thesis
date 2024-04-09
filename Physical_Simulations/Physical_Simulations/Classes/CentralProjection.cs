@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Physical_Simulations.Classes
 {
-    class CentralProjection
+    public class CentralProjection
     {
         float projectionDistance = 150;
 
