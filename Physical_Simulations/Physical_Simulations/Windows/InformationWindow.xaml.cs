@@ -43,13 +43,13 @@ namespace Physical_Simulations.Windows
         private void InitializeSlides()
         {
             slides.Add(new Pages
-            { VideoUrl = "https://www.youtube.com/watch?v=LmFCV4OCeGs", Description = "Information about Simulation" });
+            { VideoUrl = "https://www.youtube.com/watch?v=yAUFK2zmoM4", Description = "Information about Simulation" });
             slides.Add(new Pages
-            { VideoUrl = "https://www.youtube.com/watch?v=I9w8d0CfOXw", Description = "Information about Simulation graph" });
+            { VideoUrl = "https://www.youtube.com/watch?v=1DKWg38WYks", Description = "Information about Simulation graph" });
             slides.Add(new Pages
-            { VideoUrl = "https://www.youtube.com/watch?v=b7_pg6cHhI4", Description = "Information about Comparison simulation Part 1" });
+            { VideoUrl = "https://www.youtube.com/watch?v=8BzfQHRRSVE", Description = "Information about Comparison simulation Part 1" });
             slides.Add(new Pages
-            { VideoUrl = "https://www.youtube.com/watch?v=xNLsbIVUc2E", Description = "Information about Comparison simulation Part 2" });
+            { VideoUrl = "https://www.youtube.com/watch?v=X49y7fxjhQQ", Description = "Information about Comparison simulation Part 2" });
         }
 
         private void DisplayCurrentVideo()
